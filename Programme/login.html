@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styleFiles/loginPage.css">
+    <link rel="stylesheet" href="StyleFile\designsystem.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="form-area">
+            <!-- Login -->
+            <div class="login-container" id="login">
+                <form class="login-form" action="">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <span><i class='bx bx-user'></i></span>
+                        <input type="text" id="user" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span><i class='bx bx-key' ></i></span>
+                        <input type="password" id="pw" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-and-forgot">
+                        <label><input type="checkbox" name="remember">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn" onclick="tohome()">Login</button>
+                    <div class="register">
+                        <p>Don't have an account? <a href="#" onclick="register()">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration-->
+            <div class="register-container" id="register">
+                <form class="register-form" action="">
+                    <h1>Register</h1>
+                    <div class="input-box">
+                        <span><i class='bx bx-user' ></i></span>
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span><i class='bx bx-envelope bx-flip-horizontal' ></i></span>
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span><i class='bx bx-key' ></i></span>
+                        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <span><i class='bx bx-key' ></i></span>
+                        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <button type="submit" class="btn" onclick="backtologin()" >Register</button>
+                    <div class="register">
+                        <p>Already have an account? <a href="#" onclick="login()">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/loginPage.js"></script>
+</body>
+</html>
